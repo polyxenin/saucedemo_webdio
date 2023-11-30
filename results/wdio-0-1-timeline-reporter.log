@@ -1,0 +1,196 @@
+{
+  "start": "2023-11-30T22:03:26.752Z",
+  "end": "2023-11-30T22:03:28.771Z",
+  "capabilities": {
+    "acceptInsecureCerts": false,
+    "browserName": "chrome",
+    "browserVersion": "119.0.6045.105",
+    "chrome": {
+      "chromedriverVersion": "119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})",
+      "userDataDir": "C:\\Users\\pnakou\\AppData\\Local\\Temp\\scoped_dir6708_524345322"
+    },
+    "fedcm:accounts": true,
+    "goog:chromeOptions": {
+      "debuggerAddress": "localhost:59987"
+    },
+    "networkConnectionEnabled": false,
+    "pageLoadStrategy": "normal",
+    "platformName": "windows",
+    "proxy": {},
+    "setWindowRect": true,
+    "strictFileInteractability": false,
+    "timeouts": {
+      "implicit": 0,
+      "pageLoad": 300000,
+      "script": 30000
+    },
+    "unhandledPromptBehavior": "dismiss and notify",
+    "webauthn:extension:credBlob": true,
+    "webauthn:extension:largeBlob": true,
+    "webauthn:extension:minPinLength": true,
+    "webauthn:extension:prf": true,
+    "webauthn:virtualAuthenticators": true,
+    "sessionId": "1844ebf0bc1dfb50fd020342ad6dfb6c"
+  },
+  "host": "0.0.0.0",
+  "port": 59973,
+  "baseUrl": "http://localhost",
+  "framework": "mocha",
+  "mochaOpts": {
+    "timeout": 60000,
+    "ui": "bdd"
+  },
+  "duration": 2019,
+  "suites": [
+    {
+      "title": "Login Page",
+      "duration": 1965,
+      "start": "2023-11-30T22:03:26.758Z",
+      "end": "2023-11-30T22:03:28.723Z",
+      "tests": [
+        {
+          "title": "allows user to log in with valid credentials",
+          "start": "2023-11-30T22:03:26.759Z",
+          "end": "2023-11-30T22:03:27.510Z",
+          "duration": 751,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "displays an error message for locked user (locked_out_user)",
+          "start": "2023-11-30T22:03:27.513Z",
+          "end": "2023-11-30T22:03:27.910Z",
+          "duration": 397,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "displays an error message for user with invalid credentials (error_user)",
+          "start": "2023-11-30T22:03:27.912Z",
+          "end": "2023-11-30T22:03:28.162Z",
+          "duration": 250,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "displays an error message for user with empty username ()",
+          "start": "2023-11-30T22:03:28.164Z",
+          "end": "2023-11-30T22:03:28.375Z",
+          "duration": 211,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "displays an error message for user with empty password (standard_user)",
+          "start": "2023-11-30T22:03:28.377Z",
+          "end": "2023-11-30T22:03:28.545Z",
+          "duration": 168,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "displays an error message for user with empty username and password ()",
+          "start": "2023-11-30T22:03:28.548Z",
+          "end": "2023-11-30T22:03:28.722Z",
+          "duration": 174,
+          "state": "passed",
+          "screenshots": []
+        }
+      ],
+      "hooks": [
+        {
+          "start": "2023-11-30T22:03:26.759Z",
+          "end": "2023-11-30T22:03:27.229Z",
+          "duration": 470,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.510Z",
+          "end": "2023-11-30T22:03:27.511Z",
+          "duration": 1,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.513Z",
+          "end": "2023-11-30T22:03:27.701Z",
+          "duration": 188,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.911Z",
+          "end": "2023-11-30T22:03:27.911Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.913Z",
+          "end": "2023-11-30T22:03:27.941Z",
+          "duration": 28,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.163Z",
+          "end": "2023-11-30T22:03:28.163Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.164Z",
+          "end": "2023-11-30T22:03:28.198Z",
+          "duration": 34,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.375Z",
+          "end": "2023-11-30T22:03:28.376Z",
+          "duration": 1,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.377Z",
+          "end": "2023-11-30T22:03:28.399Z",
+          "duration": 22,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.545Z",
+          "end": "2023-11-30T22:03:28.546Z",
+          "duration": 1,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.549Z",
+          "end": "2023-11-30T22:03:28.571Z",
+          "duration": 22,
+          "title": "\"before each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.722Z",
+          "end": "2023-11-30T22:03:28.722Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Login Page",
+          "associatedSuite": "Login Page"
+        }
+      ]
+    }
+  ],
+  "specs": [
+    "file:///C:/allwyn/saucedemo_webdio/test/specs/login.js"
+  ],
+  "state": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  }
+}

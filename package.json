@@ -16,5 +16,8 @@
     "@wdio/mocha-framework": "^8.24.5",
     "@wdio/spec-reporter": "^8.24.2",
     "chai": "^4.3.10"
+  },
+  "dependencies": {
+    "wdio-timeline-reporter": "^5.1.4"
   }
 }

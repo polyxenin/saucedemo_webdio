@@ -1,0 +1,152 @@
+{
+  "start": "2023-11-30T22:03:26.814Z",
+  "end": "2023-11-30T22:03:28.636Z",
+  "capabilities": {
+    "acceptInsecureCerts": false,
+    "browserName": "chrome",
+    "browserVersion": "119.0.6045.105",
+    "chrome": {
+      "chromedriverVersion": "119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})",
+      "userDataDir": "C:\\Users\\pnakou\\AppData\\Local\\Temp\\scoped_dir1616_788404592"
+    },
+    "fedcm:accounts": true,
+    "goog:chromeOptions": {
+      "debuggerAddress": "localhost:59989"
+    },
+    "networkConnectionEnabled": false,
+    "pageLoadStrategy": "normal",
+    "platformName": "windows",
+    "proxy": {},
+    "setWindowRect": true,
+    "strictFileInteractability": false,
+    "timeouts": {
+      "implicit": 0,
+      "pageLoad": 300000,
+      "script": 30000
+    },
+    "unhandledPromptBehavior": "dismiss and notify",
+    "webauthn:extension:credBlob": true,
+    "webauthn:extension:largeBlob": true,
+    "webauthn:extension:minPinLength": true,
+    "webauthn:extension:prf": true,
+    "webauthn:virtualAuthenticators": true,
+    "sessionId": "6db4b27a963b777d581ee16199af7a23"
+  },
+  "host": "0.0.0.0",
+  "port": 59974,
+  "baseUrl": "http://localhost",
+  "framework": "mocha",
+  "mochaOpts": {
+    "timeout": 60000,
+    "ui": "bdd"
+  },
+  "duration": 1822,
+  "suites": [
+    {
+      "title": "Inventory Page",
+      "duration": 1781,
+      "start": "2023-11-30T22:03:26.820Z",
+      "end": "2023-11-30T22:03:28.601Z",
+      "tests": [
+        {
+          "title": "Sort products by price (low to high) ",
+          "start": "2023-11-30T22:03:26.820Z",
+          "end": "2023-11-30T22:03:27.667Z",
+          "duration": 847,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "Sort products by price (high to low) ",
+          "start": "2023-11-30T22:03:27.669Z",
+          "end": "2023-11-30T22:03:27.978Z",
+          "duration": 309,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "Sort products by name (a to z) ",
+          "start": "2023-11-30T22:03:27.981Z",
+          "end": "2023-11-30T22:03:28.309Z",
+          "duration": 328,
+          "state": "passed",
+          "screenshots": []
+        },
+        {
+          "title": "Sort products by name (z to a) ",
+          "start": "2023-11-30T22:03:28.310Z",
+          "end": "2023-11-30T22:03:28.600Z",
+          "duration": 290,
+          "state": "passed",
+          "screenshots": []
+        }
+      ],
+      "hooks": [
+        {
+          "start": "2023-11-30T22:03:26.821Z",
+          "end": "2023-11-30T22:03:27.303Z",
+          "duration": 482,
+          "title": "\"before each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.668Z",
+          "end": "2023-11-30T22:03:27.668Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.669Z",
+          "end": "2023-11-30T22:03:27.715Z",
+          "duration": 46,
+          "title": "\"before each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.978Z",
+          "end": "2023-11-30T22:03:27.979Z",
+          "duration": 1,
+          "title": "\"after each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:27.981Z",
+          "end": "2023-11-30T22:03:28.013Z",
+          "duration": 32,
+          "title": "\"before each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.309Z",
+          "end": "2023-11-30T22:03:28.309Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.310Z",
+          "end": "2023-11-30T22:03:28.371Z",
+          "duration": 61,
+          "title": "\"before each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        },
+        {
+          "start": "2023-11-30T22:03:28.600Z",
+          "end": "2023-11-30T22:03:28.600Z",
+          "duration": 0,
+          "title": "\"after each\" hook for Inventory Page",
+          "associatedSuite": "Inventory Page"
+        }
+      ]
+    }
+  ],
+  "specs": [
+    "file:///C:/allwyn/saucedemo_webdio/test/specs/inventory.js"
+  ],
+  "state": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  }
+}
