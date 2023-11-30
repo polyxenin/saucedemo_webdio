@@ -1,4 +1,6 @@
-const { $ } = require('@wdio/globals')
+const {
+    $
+} = require('@wdio/globals')
 const Page = require('./page');
 
 /**
@@ -8,34 +10,21 @@ class InventoryPage extends Page {
     /**
      * define selectors using getter methods
      */
-    // get inputUsername () {
-    //     return $('#username');
-    // }
+    get dropdown() {
+        return $('//*[@class="product_sort_container"]');
+    }
 
-    // get inputPassword () {
-    //     return $('#password');
-    // }
+    get productTitles() {
+        return $$('//div[@class="inventory_item_name "]');
+    }
 
-    // get btnSubmit () {
-    //     return $('button[type="submit"]');
-    // }
+    get productPrices() {
+        return $$('//div[@class="inventory_item_price"]');
+    }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    // async login (username, password) {
-    //     await this.inputUsername.setValue(username);
-    //     await this.inputPassword.setValue(password);
-    //     await this.btnSubmit.click();
-    // }
-
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    // open () {
-    //     return super.open('login');
-    // }
+    async select(value) {
+        await this.dropdown.selectByAttribute('value', value)
+    }
 }
 
 module.exports = new InventoryPage();
