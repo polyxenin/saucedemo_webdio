@@ -3,11 +3,7 @@
 
 name: saucedemo_wdio_ci
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,4 +16,4 @@ jobs:
       - name: Install
         run: npm install
       - name: Test
-        run:  ./node_modules/.bin/wdio run wdio.conf.js
+        run:  npm test
