@@ -9,10 +9,6 @@ describe('Login Page', () => {
         await LoginPage.open();
     });
 
-    afterEach('clear sessionstorage', () => {
-        browser.execute(() => sessionStorage.clear());
-    });
-
     it('allows user to log in with valid credentials', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');

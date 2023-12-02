@@ -13,11 +13,7 @@ describe('Inventory Page', () => {
         await LoginPage.open();
     });
 
-    afterEach('clear sessionstorage', () => {
-        browser.execute(() => sessionStorage.clear())
-    })
-
-    it('Sort products by price (low to high) ', async () => {
+    it('sort products by price (low to high) ', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
         await InventoryPage.select('lohi');
 
@@ -29,7 +25,7 @@ describe('Inventory Page', () => {
     })
 
 
-    it('Sort products by price (high to low)', async () => {
+    it('sort products by price (high to low)', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
         await InventoryPage.select('hilo');
 
@@ -41,7 +37,7 @@ describe('Inventory Page', () => {
     })
 
 
-    it('Sort products by name (a to z)', async () => {
+    it('sort products by name (a to z)', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
 
         await InventoryPage.select('az');
@@ -54,8 +50,19 @@ describe('Inventory Page', () => {
     })
 
 
-    it('Sort products by name (z to a)', async () => {
+    it('sort products by name (z to a)', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
+
+        await InventoryPage.select('za');
+
+        all_products = await InventoryPage.productsTitles.map(element => element.getText());
+        all_products_ordered = _.orderBy(all_products, [], ['desc']);
+
+        expectChai(_.isEqual(all_products, all_products_ordered)).to.equal(true, "Sort products by name descending is not applied");
+    })
+
+    it('sort products by name (z to a) for problem_user', async () => {
+        await LoginPage.login('problem_user', 'secret_sauce');
 
         await InventoryPage.select('za');
 
@@ -67,7 +74,7 @@ describe('Inventory Page', () => {
 
 
     // We can repeat this test for every element (name, description, price) in product component
-    it('Product images are displayed correctly for standard_user', async () => {
+    it('product images are displayed correctly for standard_user', async () => {
 
         await LoginPage.login('standard_user', 'secret_sauce');
 
@@ -78,10 +85,9 @@ describe('Inventory Page', () => {
 
     });
 
-    it('Product images are displayed correctly for problem_user', async () => {
+    it('product images are displayed correctly for problem_user', async () => {
 
         await LoginPage.login('problem_user', 'secret_sauce');
-        await browser.pause(10000)
         all_images = await InventoryPage.productsImages.map(element => element.getAttribute('src'));
         all_images_expected = items.map(i => i.image);
         
@@ -89,7 +95,7 @@ describe('Inventory Page', () => {
 
     });
 
-    it('add product to cart', async () => {
+    it('add the first product to cart', async () => {
 
         await LoginPage.login('standard_user', 'secret_sauce');
         await InventoryPage.addProductToCart('sauce-labs-backpack');
@@ -100,11 +106,18 @@ describe('Inventory Page', () => {
 
     });
 
-    it('remove product from cart', async () => {
+    it('remove the first product from cart', async () => {
         await LoginPage.login('standard_user', 'secret_sauce');
         await InventoryPage.removeProductFromCart('sauce-labs-backpack');
         
         await expect(HeaderPage.emptyCart).toHaveText("");
+    });
+
+    it('go to cart when clicking cart icon', async () => {
+        await LoginPage.login('standard_user', 'secret_sauce');
+        await HeaderPage.clickCart();
+
+        await expect(browser).toHaveUrl('https://www.saucedemo.com/cart.html');
     });
 
 })

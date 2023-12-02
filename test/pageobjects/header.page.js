@@ -8,6 +8,14 @@ const Page = require('./page');
  */
 class HeaderPage extends Page {
 
+    get burgerMenu() {
+        return $('#react-burger-menu-btn');
+    }
+
+    get resetAppLink() {
+        return $('#reset_sidebar_link');
+    }
+
     get cartLink() {
         return $('//a[@class="shopping_cart_link"]');
     }
@@ -24,6 +32,16 @@ class HeaderPage extends Page {
         await this.cartLink.click();
     }
 
+    async clickBurgerMenu() {
+        await this.burgerMenu.click();
+    }
+
+    async clickResetAppLink() {
+        await this.resetAppLink.click();
+    }
+
 }
+
+
 
 module.exports = new HeaderPage();
