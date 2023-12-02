@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": ".\\node_modules\\.bin\\wdio run wdio.conf.js",
+    "test:ci": "./node_modules/.bin/wdio run wdio.conf.js",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "keywords": [],

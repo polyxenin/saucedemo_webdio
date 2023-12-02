@@ -20,7 +20,7 @@ The website under test can be found at https://www.saucedemo.com/.
   ```
 - Run tests:
   ```sh
-  ./node_modules/.bin/wdio run wdio.conf.js
+  npm run test
   ```
 
 
