@@ -15,7 +15,7 @@ describe('Login Page', () => {
     });
 
     cases.forEach((item) => {
-        it(`displays an error message for ${item.description} (${item.username})`, async () => {
+        it(`displays an error message for ${item.description}`, async () => {
             await LoginPage.login(item.username, item.password);
             await expect(LoginPage.errorDiv).toHaveText(item.message);
         });
