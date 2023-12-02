@@ -52,4 +52,4 @@ Test data files are under _resources/data_ directory. <br />
 Report results are under _results_ directory. <br />
 
 ## CI/CD Pipeline
-A CI/CD pipeline is also provided to facilitate the tests execution. The pipeline configuration is in .github/workflows/ci.yml.
+A CI/CD pipeline is also provided to facilitate the tests execution. The pipeline is configured in .github/workflows/ci.yml.
