@@ -50,4 +50,4 @@ The website under test can be found at https://www.saucedemo.com/.
 Page objects are placed under _test/pageobjects_ directory.  <br />
 Test data files are under _resources/data_ directory. <br />
 Report results are under _results_ directory. <br />
-  
+Also  
