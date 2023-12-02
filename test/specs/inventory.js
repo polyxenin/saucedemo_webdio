@@ -5,6 +5,7 @@ const expectChai = require('chai').expect;
 
 const LoginPage = require('../pageobjects/login.page');
 const InventoryPage = require('../pageobjects/inventory.page');
+const HeaderPage = require('../pageobjects/header.page');
 
 describe('Inventory Page', () => {
 
@@ -66,7 +67,7 @@ describe('Inventory Page', () => {
 
 
     // We can repeat this test for every element (name, description, price) in product component
-    it('Products images appearance for standard_user', async () => {
+    it('Product images are displayed correctly for standard_user', async () => {
 
         await LoginPage.login('standard_user', 'secret_sauce');
 
@@ -77,15 +78,33 @@ describe('Inventory Page', () => {
 
     });
 
-    it('Product images appearance for problem_user', async () => {
+    it('Product images are displayed correctly for problem_user', async () => {
 
         await LoginPage.login('problem_user', 'secret_sauce');
-       
+        await browser.pause(10000)
         all_images = await InventoryPage.productsImages.map(element => element.getAttribute('src'));
         all_images_expected = items.map(i => i.image);
         
         expectChai(_.isEqual(all_images, all_images_expected)).to.equal(true, "Product images are not displayed correctly for problem_user");
 
+    });
+
+    it('add product to cart', async () => {
+
+        await LoginPage.login('standard_user', 'secret_sauce');
+        await InventoryPage.addProductToCart('sauce-labs-backpack');
+
+        await expect(HeaderPage.cartQuantity).toHaveText("1");
+
+        await InventoryPage.removeProductFromCart('sauce-labs-backpack');
+
+    });
+
+    it('remove product from cart', async () => {
+        await LoginPage.login('standard_user', 'secret_sauce');
+        await InventoryPage.removeProductFromCart('sauce-labs-backpack');
+        
+        await expect(HeaderPage.emptyCart).toHaveText("");
     });
 
 })

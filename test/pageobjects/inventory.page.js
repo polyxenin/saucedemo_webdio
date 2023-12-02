@@ -27,6 +27,29 @@ class InventoryPage extends Page {
     async select(value) {
         await this.dropdown.selectByAttribute('value', value)
     }
+
+    get productsButtons() {
+        return $$('//div[@class="pricebar"]/button');
+    }
+    
+    async addProductToCart(productName) { 
+
+        await this.productsButtons.forEach(async element => {
+            if(await element.getAttribute('name') ===  'add-to-cart-'+ productName){
+                element.click();
+            }
+        });        
+    }
+
+    async removeProductFromCart(productName) {
+        
+        await this.productsButtons.forEach(async element => {
+            console.log(await element.getAttribute('id'))
+            if(await element.getAttribute('name') ===  'remove-'+ productName){
+                element.click();
+            }
+        });
+    }
 }
 
 module.exports = new InventoryPage();
