@@ -16,4 +16,4 @@ jobs:
       - name: Install
         run: npm install
       - name: Test
-        run:  ./node_modules/.bin/wdio run wdio.conf.js
+        run:  npm test
